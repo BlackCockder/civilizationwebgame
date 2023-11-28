@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Civilisation</title>
+        <script src="scripts/script.js"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+        <link rel="icon" type="image/x-icon" href="images/logo.ico">
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap-5.3.2-dist/css/bootstrap.css">~
+        <script>
+            localStorage.removeItem('map');
+            localStorage.removeItem('flagGenerated');
+        </script>
+    </head>
+        <body>
+            <header>
+                <h1 class="titlem">
+                    Civilization
+                </h1>
+                <button onclick="generateMap(tile_counts.medium)">Generate Map</button>
+                <button onclick="removeMap()">Remove current map</button>
+            </header>
+            <main>
+                <section class="map_wrap">
+                </section>
+                <section class="map map2" id="template">
+                </section>
+            </main>
+    </body>
+</html>
