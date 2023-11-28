@@ -123,6 +123,13 @@ function checkID(tileID) {
     console.log(tileData);
 }
 function removeMap() {
-    localStorage.removeItem('map');
-    localStorage.removeItem('flagGenerated');
+    if(JSON.parse(localStorage.getItem('flagGenerated'))) {
+       localStorage.removeItem('map');
+        localStorage.removeItem('flagGenerated');
+        document.body.querySelector('.map_wrap').innerHTML = "";
+        localStorage.setItem('flagGenerated', false); 
+    } else {
+        alert('Map is not generated!');
+    }
+    
 }
