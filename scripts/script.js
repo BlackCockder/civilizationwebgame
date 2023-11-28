@@ -5,11 +5,6 @@ const tile_counts = {
     medium: 100,
     large: 400
 }
-const rowsandcolumns = {
-    small: 5,
-    medium: 10,
-    large: 20
-}
 const max_random_value = 100;
 const random4 = 25;
 const random5 = 20;
