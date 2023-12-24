@@ -1,5 +1,5 @@
 const terrain_types = ['desert', 'forest', 'mountains', 'river', 'plains', 'beach']
-const resource_types = ['iron', 'wood', 'marble', 'oil', 'tin', 'coal', 'lead', 'honey', 'gems', 'wheat', 'rubber'];
+const resource_types = ['iron', 'wood', 'marble', 'oil', 'tin', 'coal', 'lead', 'honey', 'gems', 'wheat', 'rubber', 'wool'];
 const tile_counts = {
     small: 25,
     medium: 100,
@@ -120,11 +120,9 @@ function checkID(tileID) {
 function removeMap() {
     if(JSON.parse(localStorage.getItem('flagGenerated'))) {
        localStorage.removeItem('map');
-        localStorage.removeItem('flagGenerated');
         document.body.querySelector('.map_wrap').innerHTML = "";
         localStorage.setItem('flagGenerated', false); 
     } else {
         alert('Map is not generated!');
     }
-    
 }
